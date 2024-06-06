@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Headers</title>
+   
+    <link rel="stylesheet" href="css/index.css">
+   <link rel="stylesheet" href="css/products.css">
+
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+        emailjs.init("qzzOh0sv2Xmq_p0T-");
+        })();
+    </script>
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <a href="index.html">Home</a>
+        <a href="index.html">Services</a>
+        <a href="about.html">About</a>
+         
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">&#9776;</a>
+    </div>
+    
+    <script>
+        function toggleNavbar() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+
+    <section>
+        <div class="container">
+            
+
+            <div class="header" id="zoro" onclick="toggleContent(this)">+<p>გაჯი</p></div>
+            <div class="content">
+                <div><label for="select_gaji">აირჩიე გაჯის ხარისხი</label></div>
+                    <div>
+                        <select id="select_gaji">
+                            <option value="0">არჩევნის გარეშე 0</option>
+                            <option value="80">1 ხარისხის გაჯი</option>
+                            <option value="110">2 ხარისხის გაჯი</option>
+                        
+                        </select>
+                    </div>
+                <input type="number" id="input_gaji" placeholder="რამდენი ტონა?">
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>გიფსო კარდონი</p></div>
+            <div class="content">
+            <div> <label for="select_gifso">აირჩიე გიფსოკარდონი:</label></div>
+            <div>  <select id="select_gifso">
+                        <option value="0">არჩევნის გარეშე 0</option>
+                        <option value="12">წყალგამძლე მწვანე ფილა</option>
+                        <option value="14">ჩვეულებრივი  ფილა</option>
+                        
+                    </select>
+                </div>
+                <input type="number" id="input_gifso" placeholder="რამდენი ცალი?">
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>ცემენტი</p></div>
+            <div class="content">
+            <div><label for="selectcementi">აირჩიე ცემენტის ხარისხი:</label></div> 
+                
+            <div>
+                    <select id="selectcementi">
+                        <option value="0">არჩევნის გარეშე 0</option>
+                        <option value="40">მარკა 100</option>
+                        <option value="60">მარკა 150</option>
+                        <option value="80">მარკა 200</option>
+                    </select>
+                </div> 
+                <input type="number" id="inputcementi" placeholder="რამდენი კუბი გინდა?">
+                <P>ცემენტის მიწოდება თბილისის მაშტაბით უფასოა</P>
+
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>ქვიშა</p></div>
+            <div class="content">
+                <div><label for="select_qvisha">აირჩიე ცემენტის ხარისხი:</label></div>
+                <div>  <select id="select_qvisha">
+                        <option value="0">არჩევნის გარეშე 0</option>
+                        <option value="60">შავი სილა </option>
+                        <option value="80">საჩხერის ყვითელი </option>
+                        
+                    </select>
+                </div>
+                
+                <input type="number" id="input_qvisha" placeholder="რამდენი კუბი გინდა?">
+                <P>ქვიშის  მიწოდება თბილისის მაშტაბით უფასოა</P>
+            
+            </div>
+            <div class="header" onclick="toggleContent(this)">+<p>ბლოკი</p></div>
+            <div class="content">
+                <div><label for="select_bloki">აირჩიე ბლოკი</label></div>
+                <div>   <select id="select_bloki">
+                        <option value="0">არჩევნის გარეშე 0</option>
+                        <option value="0.60"> ბლოკი 10სმ </option>
+                        <option value="0.80">ბლოკი 15 სმ </option>
+                        <option value="1.3">ბლოკი 20 სმ </option>
+                        <option value="1.6">ბლოკი 30 სმ </option>
+                        
+                    </select>
+                </div>
+
+                <input type="number" id="input_bloki" placeholder="რამდენი ცალი ?">
+                
+            </div>
+
+            <!-- მიწოდება -->
+            <div class="header" onclick="toggleContent(this)">+<p>გადაზიდვის სერვისი გსურთ?</p></div>
+            <div class="content">
+                <div> <label for="select1">500 კილომდე ტვირთი:</label></div>
+                    <div> 
+                        <select id="select1">
+                            <option value="0">არჩევნის გარეშე 0</option>
+                            <option value="1">მანძილი 10 კმდე</option>
+                            <option value="2">მანძილი 20 კმდე</option>
+                            <option value="3">მანძილი 20  კმ ზევით</option>
+                        </select>
+                    </div>
+                <br><br>
+
+            <div> <label for="select2">1000 კილომდე ტვირთი:</label> </div>
+                <div>
+                    <select id="select2">
+                        <option value="0">არჩევნის გარეშე 0</option>
+                        <option value="1">მანძილი 10 კმდე</option>
+                        <option value="2">მანძილი 20 კმდე</option>
+                        <option value="3">მანძილი 20  კმ ზევით</option>
+                    </select>
+                </div>
+                <br><br>
+            <div> <label for="select3">1000 კილოზე მეტი ტვირთი:</label></div>
+                <div>
+                    <select id="select3">
+                        <option value="0">არჩევნის გარეშე 0</option>
+                        <option value="1">მანძილი 10 კმდე</option>
+                        <option value="2">მანძილი 20 კმდე</option>
+                        <option value="3">მანძილი 20  კმ ზევით</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>ახალი მომსახურება</p></div>
+            <div class="content">
+            მალე დაემატება
+            </div>
+        
+        </div>
+        
+        <div class="summwrapper">
+             <!-- თუ ონკლიკს დაუტევებ მაშინ ჯერ კიტხავს ნომერს თუ არ შეიყვნს მაინც აჩვენებს ჯამს -->
+            <!-- <button onclick="allsumm()" class="summbutton" id="summButton">  -->
+                <button  class="summbutton" id="summButton">   გამოთვალე ჯამური  გადასახადი  :</button>
+            <p id="results"></p>
+        </div>
+    </section>
+
+
+
+    <script src="js/products.js"></script>
+</body>
+</html>

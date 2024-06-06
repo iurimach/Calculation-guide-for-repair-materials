@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/gatana.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+        emailjs.init("qzzOh0sv2Xmq_p0T-");
+        })();
+    </script>
+
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <a href="index.html">Home</a>
+        <a href="index.html">Services</a>
+        <a href="about.html">About</a>
+         
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">&#9776;</a>
+    </div>
+    
+    <script>
+        function toggleNavbar() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+    <section>
+
+        <div class="container">
+            <div class="header" onclick="toggleContent(this)">+ <p>ნაგვის გატანა </p></div>
+            <div class="content">
+                <div><label for="select_gatana">აირჩიე წონა</label></div>
+                <div>   <select id="select_gatana">
+                        <option value="0">არჩევნის გარეშე 0</option>
+                        <option value="60"> 100კგ_მდე </option>
+                        <option value="80">200კგ_მდე </option>
+                        <option value="120">300კგ_მდე </option>
+                        <option value="150">400კგ_მდე </option>
+                        <option value="250">450კგ_მეტი </option>
+                        
+                    </select>
+                </div>
+                
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>გჭირდებათ მუშების დახმარება?</p></div>
+            <div class="content">
+                <div><label for="select_mushebi">აირჩიე ტომრების რაოდენობა</label></div>
+                <div>   <select id="select_mushebi">
+                        <option value="0">არჩევნის გარეშე 0</option>
+                        <option value="1.5"> ლიფტის გამოყნებით </option>
+                        <option value="3.5">ლიფტის გარეშე </option>
+                        
+                        
+                    </select>
+                </div>
+                <input type="number" id="input_mushebi" placeholder="რამდენი პატარა ტომარაა ?">
+            
+            </div>
+        </div>
+
+        <div class="summwrapper">
+            <!-- თუ ონკლიკს დაუტევებ მაშინ ჯერ კიტხავს ნომერს თუ არ შეიყვნს მაინც აჩვენებს ჯამს -->
+            <!-- <button onclick="allsumm()" class="summbutton" id="summButton">  -->
+            <button  class="summbutton" id="summButton">   გამოთვალე ჯამური  გადასახადი  :</button>
+            
+            <p id="results"></p>
+        </div>
+    </section>
+    
+
+    <script src="js/gatana.js"></script>
+</body>
+</html>

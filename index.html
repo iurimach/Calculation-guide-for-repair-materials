@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Headers</title>
+   
+   <link rel="stylesheet" href="css/index.css">
+   <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+
+<div class="navbar" id="myNavbar">
+    <a href="index.html">Home</a>
+    <a href="index.html">Services</a>
+    <a href="about.html">About</a>
+     
+    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">&#9776;</a>
+</div>
+
+<script>
+    function toggleNavbar() {
+        var x = document.getElementById("myNavbar");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+</script>
+
+    <div class="wrapper_wahlen">
+        <div class="div1">
+            <a href="xelosnebi.html"><div class="xelosnebiwrapper"> ხელოსნები</div></a>
+            <a href="products.html"> <div class="productswrapper">  მასალები </div></a>
+        </div>
+        <div class="div2">
+            <a href="demontaji.html"> <div class="productswrapper">  დემონტაჟი </div></a>
+            <a href="gatana.html"> <div class="productswrapper">  ნარჩენების გატანა </div></a>
+        </div>
+    </div>
+    
+    
+    
+
+   
+
+    
+
+    <footer>
+        <p>&copy; 2024 iuri_match. All Rights Reserved.</p>
+    </footer>
+
+
+
+
+
+</body>
+</html>

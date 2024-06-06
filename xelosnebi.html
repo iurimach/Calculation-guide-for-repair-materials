@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Headers</title>
+   
+   <link rel="stylesheet" href="css/index.css">
+   <link rel="stylesheet" href="css/xelosnebi.css">
+   <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+        emailjs.init("qzzOh0sv2Xmq_p0T-");
+        })();
+    </script>
+   
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <a href="index.html">Home</a>
+        <a href="index.html">Services</a>
+        <a href="about.html">About</a>
+         
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">&#9776;</a>
+    </div>
+    
+    <script>
+        function toggleNavbar() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+
+    <section>
+        <div class="container">
+        
+            
+            <div class="header" onclick="toggleContent(this)">+<p>სტიაშკის დასხმა </p></div>
+            <div class="content">
+                <input type="number" id="input_stiashka" placeholder="რამდენი კვადრატია?">
+                
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>კაფელის ხელოსანი </p></div>
+            <div class="content">
+                <input type="number" id="input_kafeli" placeholder="რამდენი კვადრატია?">
+            
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>ლამინატის ხელოსანი </p></div>
+            <div class="content">
+                <input type="number" id="input_laminati" placeholder="რამდენი კვადრატია?">
+                
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>სანტექნიკა</p></div>
+            <div class="content">
+                <input type="number" id="input_santeknika" placeholder="რამდენი სველი წერტილია?">
+                
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>ცენტრალური გათბობა </p></div>
+            <div class="content">
+                <div><label for="select_centraluri">აირჩიე მომსახურების სახე</label></div>
+                        <div>
+                            <select id="select_centraluri">
+                                <option value="0">არჩევნის გარეშე 0</option>
+                                <option value="300">ქვაბის მონტაჟი</option>
+                                <option value="50">რადიტორის მონტაჟი </option>
+                                <option value="75">დაქსელვა გაყვანილობის</option>
+                            
+                            </select>
+                        </div>
+                <input type="number" id="input_centrluri" placeholder="რაოდენობა წერტილის?">
+                <button onclick="centraluri()">k</button>
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>ელექტროობა</p></div>
+            <div class="content">
+                <input type="number" id="input_elektrooba" placeholder="რამდენი წეტილია?">
+                
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>მალიარკა- შპალერი</p></div>
+            <div class="content">
+                <input type="number" id="input_maliarka" placeholder="რამდენი კვადრტია კედელი">
+                
+            </div>
+
+            <div class="header" onclick="toggleContent(this)">+<p>ჭერის ხელოსანი</p></div>
+            <div class="content">
+                <div><label for="select_gaji">აირჩიე რომელი ჭერია</label></div>
+                        <div>
+                            <select id="select_cheri">
+                                <option value="0">არჩევნის გარეშე 0</option>
+                                <option value="20">ფრანგული-გასაჭიმი ჭერი</option>
+                                <option value="15">გიფსო კარდონით</option>
+                            
+                            </select>
+                        </div>
+                <input type="number" id="input_cheri" placeholder="რამდენი კვადრტია ჭერი">
+                <button onclick="cheri()">k</button>>
+            </div>
+        </div>
+
+    
+
+        <div class="summwrapper">
+            <!-- თუ ონკლიკს დაუტევებ მაშინ ჯერ კიტხავს ნომერს თუ არ შეიყვნს მაინც აჩვენებს ჯამს -->
+            <!-- <button onclick="allsumm()" class="summbutton" id="summButton">  -->
+            <button  class="summbutton" id="summButton">   გამოთვალე ჯამური  გადასახადი  :</button>
+            <p id="results"></p>
+        </div>
+    </section>
+
+    <script src="js/xelosnebi.js"></script>
+</body>
+</html>
