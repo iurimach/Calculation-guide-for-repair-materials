@@ -1,0 +1,15 @@
+
+@media (max-width:675px){
+   
+    .xelosnebiwrapper{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .productswrapper{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .summwrapper{
+        margin-top: 15px;
+    }
+}
